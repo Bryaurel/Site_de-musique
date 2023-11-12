@@ -17,6 +17,12 @@ form {
  .PremierePage {
     margin-left: 100px;
     margin-right: 100px;
+    background-image: url(Media/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
  }
 
  img {
