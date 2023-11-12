@@ -15,8 +15,6 @@ form {
     background-color: #f9f9f9;
 }
  .PremierePage {
-    margin-left: 100px;
-    margin-right: 100px;
     background-image: url(Media/bg.png);
     background-size: cover;
     background-attachment: fixed;
