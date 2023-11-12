@@ -8,9 +8,9 @@ body {
 form {
     text-align: center;
     border: 1px solid #ccc;
-    padding: 15px 110px 15px 15px;
+    padding: 15px 90px 15px 15px;
     border-radius: 8px;
-    width: 60%; 
+    width: 75%; 
     max-width: 500px; 
     margin: auto; 
     background: none; 
@@ -19,12 +19,27 @@ form {
 form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
-    width: 150%;
+    width: 130%;
+    height: 7px;
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
 
+form input[type="submit"] {
+    width: 60%;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
 
 .PremierePage {
     background-image: url(Media/bg.png);
@@ -53,6 +68,4 @@ form input[type="password"] {
     color: gold;
  }
 
- .formulaire {
-    ;
- }
+ 
