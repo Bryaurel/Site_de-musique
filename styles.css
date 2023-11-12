@@ -19,6 +19,6 @@ form {
     margin-right: 100px;
  }
 
- .bienvenue {
-    background-color: blue;
+ img {
+    display: flex;
  }
