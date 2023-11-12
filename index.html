@@ -29,7 +29,16 @@
                 </form>
     
                 <p>Déjà un compte ?  
-                    <a href="connexion.php">Connectez-vous ici</a></p>
+                    <a href="connexion">Connectez-vous ici</a>
+                </p>
+
+                <div id="connexion" class="formulaire" style="display: none;">
+                    <form action="connexion.php" method="post">
+                        <input type="text" name="email" placeholder="Adresse e-mail" required><br>
+                        <input type="password" name="motdepasse" placeholder="Mot de passe" required><br>
+                        <input type="submit" value="Se connecter">
+                    </form>
+                </div>
             </div>
         </div>
         
