@@ -12,3 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.getElementById("lien-connexion").addEventListener("click", function(event) {
+    event.preventDefault(); // Pour éviter la navigation vers une nouvelle page
+    document.getElementById("connexion").style.display = "block"; // Afficher le formulaire de connexion
+});
