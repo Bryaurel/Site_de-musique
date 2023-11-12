@@ -2,16 +2,31 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    color: white;
 }
 
 form {
     text-align: center;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 15px 110px 15px 15px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    width: 60%; 
+    max-width: 500px; 
+    margin: auto; 
+    background: none; 
 }
- .PremierePage {
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 150%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+.PremierePage {
     background-image: url(Media/bg.png);
     background-size: cover;
     background-attachment: fixed;
@@ -24,9 +39,20 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 250px;
+ }
+
+ .bienvenue h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    color: gold;
+ }
+
+ .bienvenue p {
+    font-weight: bold;
+    color: gold;
  }
 
  .formulaire {
-    margin-bottom: 60px;
+    ;
  }
