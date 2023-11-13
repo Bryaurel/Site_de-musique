@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -80px; /* Cachée initialement */
+    width: 80px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s; /* Animation de défilement */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-image: url('chemin/vers/votre/icon.png');
+    /* Styles pour les icônes */
+}
+
+.icon.active {
+    /* Style pour l'icône de la section active */
+}
+
+/* Styles pour le mode nuit */
+body.night-mode {
+    /* Styles pour le mode nuit */
+}
