@@ -20,25 +20,18 @@
 
             <div class="formulaire">
 
-                <form action="traitement.php" method="post">
-                    <input type="text" name="prenom" placeholder="Prenom(s)" required>
-                    <input type="text" name="nom" placeholder="Nom(s)" required><br>
-                    <input type="email" name="email" placeholder="Adresse e-mail" required><br>
-                    <input type="password" name="motdepasse" placeholder="Mot de passe" required><br>
-                    <input type="submit" value="S'inscrire">
-                </form>
-    
-                <p>Déjà un compte ?  
-                    <a href="#" id="lien-connexion">Connectez-vous ici</a>
+                <p id="inscription" class="formulaire">
+                    <form action="traitement.php" method="post">
+                        <input type="text" name="prenom" placeholder="Prenom(s)" required>
+                        <input type="text" name="nom" placeholder="Nom(s)" required><br>
+                        <input type="email" name="email" placeholder="Adresse e-mail" required><br>
+                        <input type="password" name="motdepasse" placeholder="Mot de passe" required><br>
+                        <input type="submit" value="S'inscrire">
+                    </form>
+                    Déjà un compte ?  
+                    <a href="page-connexion.html" id="lien-connexion">Connectez-vous ici</a>
                 </p>
 
-                <div id="connexion" class="formulaire" style="display: none;">
-                    <form action="connexion.php" method="post">
-                        <input type="text" name="email" placeholder="Adresse e-mail" required><br>
-                        <input type="password" name="motdepasse" placeholder="Mot de passe" required><br>
-                        <input type="submit" value="Se connecter">
-                    </form>
-                </div>
             </div>
         </div>
         
