@@ -8,12 +8,6 @@
     transition: left 0.3s; /* Animation de défilement */
 }
 
-.icon {
-    width: 60px;
-    height: 60px;
-    background-image: url('chemin/vers/votre/icon.png');
-    /* Styles pour les icônes */
-}
 
 .icon.active {
     /* Style pour l'icône de la section active */
