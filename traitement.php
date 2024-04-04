@@ -2,17 +2,21 @@
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Connexion à la base de données
+    
     $serveur = "BryAurel";
     $port = 3306;
     $utilisateur = "root";
     $motdepasse = "Basketball";
     $base_de_donnees = "musique";
-
+    
     $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $base_de_donnees, $port);
-
+    
     // Vérifier la connexion
+    
     if ($connexion->connect_error) {
         die("Échec de la connexion à la base de données : " . $connexion->connect_error);
+    } else {
+        echo "Connexion réussie !"; // Affiche un message si la connexion est réussie
     }
 
     // Récupérer les données du formulaire
@@ -28,16 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Exécuter la requête
     if ($requete->execute()) {
         echo "Inscription réussie !";
+        // Après l'insertion réussie des données, redirige vers la page d'accueil
+        header("Location: page-accueil.html");
+        exit();
     } else {
         echo "Erreur lors de l'inscription : " . $requete->error;
     }
 
     // Fermer la connexion à la base de données
     $connexion->close();
-
-    // Après l'insertion réussie des données
-header("Location: page-accueil.html");
-exit();
-
 }
 ?>
