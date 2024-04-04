@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(48, 48, 155);
+}
+
 .navBar {
     position: fixed;
     top: 0;
