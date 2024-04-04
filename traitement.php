@@ -34,5 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Fermer la connexion à la base de données
     $connexion->close();
+
+    // Après l'insertion réussie des données
+header("Location: page-accueil.html");
+exit();
+
 }
 ?>
