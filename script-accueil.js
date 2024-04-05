@@ -1,9 +1,9 @@
 // script.js
-document.querySelector('.navbar').addEventListener('mouseover', function() {
+document.querySelector('.navBar').addEventListener('mouseover', function() {
     this.style.left = '0'; // Dérouler la barre de navigation
 });
 
-document.querySelector('.navbar').addEventListener('mouseout', function() {
+document.querySelector('.navBar').addEventListener('mouseout', function() {
     this.style.left = '-80px'; // Cacher la barre de navigation
 });
 
@@ -22,3 +22,12 @@ toggleButton.addEventListener('click', function() {
     document.body.classList.toggle('night-mode');
 });
 document.body.appendChild(toggleButton);
+
+// script-accueil.js
+document.querySelector('.navBar').addEventListener('mouseover', function() {
+    this.style.left = '0'; // Fait apparaître la barre de navigation
+});
+
+document.querySelector('.navBar').addEventListener('mouseout', function() {
+    this.style.left = '-80px'; // Fait disparaître la barre de navigation
+});
