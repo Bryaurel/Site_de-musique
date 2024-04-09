@@ -1,7 +1,7 @@
 <?php
 // Connexion à la base de données
 $servername = "127.0.0.1"; // Nom d'hôte (Local)
-$username = "root"; // Nom d'utilisateur
+$username = "bryaurel"; // Nom d'utilisateur
 $password = "Basketball2.0"; // Mot de passe
 $dbname = "musique"; // Nom de la base de données
 
