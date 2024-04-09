@@ -103,4 +103,17 @@ form input[type="submit"]:hover {
  
 a {
     color: #3498db;
- }
+}
+
+.error-message {
+    color: red; /* Couleur du texte */
+    background-color: #ffe6e6; /* Couleur de fond */
+    border: 1px solid #ff9999; /* Bordure */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Bordure arrondie */
+    margin-top: 5px; /* Espacement par rapport aux éléments voisins */
+}
+
+.error-message::before {
+    content: "⚠ "; /* Icône d'avertissement */
+}

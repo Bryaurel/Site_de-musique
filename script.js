@@ -3,16 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const inscriptionForm = document.getElementById('inscription-form');
     if (inscriptionForm) {
         inscriptionForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
             // Validation des champs du formulaire
             const nom = inscriptionForm.querySelector('input[name="nom"]').value;
             const email = inscriptionForm.querySelector('input[name="email"]').value;
             const motDePasse = inscriptionForm.querySelector('input[name="motdepasse"]').value;
 
             if (nom === '' || email === '' || motDePasse === '') {
-                event.preventDefault(); // Empêche l'envoi du formulaire si des champs sont vides
                 alert('Veuillez remplir tous les champs !');
+            } else if (!isValidEmail(email)) {
+                alert('Veuillez saisir une adresse e-mail valide !');
             } else {
-                // Si tous les champs sont remplis, vérifiez l'email
+                // Si les données sont valides, vérifiez l'email côté serveur
                 checkEmail(email);
             }
         });
@@ -32,19 +35,37 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    function checkEmail(email) {
-        // Effectuez une requête AJAX pour vérifier si l'email est déjà utilisé
-        // Si l'email est déjà utilisé, mettez à jour le message d'erreur
-        const emailError = document.getElementById('email-error');
-        if (emailError) {
-            // Vous pouvez remplacer cette ligne par votre propre code AJAX pour vérifier l'email
-            const emailExists = false; // Remplacez par le résultat de la vérification de l'email
-            if (emailExists) {
-                emailError.textContent = 'Cette adresse e-mail est déjà utilisée. Veuillez en utiliser une autre.';
+});
+
+// Fonction pour vérifier si l'email est au bon format
+function isValidEmail(email) {
+    const emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+}
+
+// Fonction pour vérifier l'email côté serveur avec une requête AJAX
+function checkEmail(email) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'inscription.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            if (response.error) {
+                const emailError = document.getElementById('email-error');
+                if (emailError) {
+                    emailError.textContent = response.message;
+                }
             } else {
-                emailError.textContent = ''; // Effacez le message d'erreur s'il n'y a pas d'erreur
+                // Réinitialiser le message d'erreur s'il n'y a pas d'erreur
+                const emailError = document.getElementById('email-error');
+                if (emailError) {
+                    emailError.textContent = '';
+                }
+                // Rediriger vers la page d'accueil après une inscription réussie
+                window.location.href = 'page-accueil.html';
             }
         }
-    }
-});
+    };
+    xhr.send('email=' + email);
+}
