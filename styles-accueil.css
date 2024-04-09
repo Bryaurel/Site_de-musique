@@ -1,8 +1,9 @@
+/* Style général pour la page d'accueil */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2e6d4; /* Couleur de fond beige */
-    margin: 0;
-    padding: 0;
+    background-color: #f5f5f5; /* Couleur de fond générale */
+    color: #333; /* Couleur du texte */
+    padding: 20px;
 }
 
 header {
@@ -28,19 +29,73 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-    background-color: #deb887; /* Couleur de fond brun clair */
-    padding: 20px;
-    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h2 {
-    color: #8b4513; /* Couleur du texte marron */
+    font-size: 24px;
+    color: #555; /* Couleur des titres de section */
 }
+
+/* Style des sections de la page d'accueil */
+section {
+    margin-bottom: 40px;
+}
+
+.video-thumbnail {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.video-thumbnail img {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.publication {
+    margin-bottom: 20px;
+}
+
+.publication h3 {
+    font-size: 18px;
+    color: #777; /* Couleur des titres de publication */
+}
+
+.publication p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.profil {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.profil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profil h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.profil p {
+    font-size: 14px;
+    color: #777; /* Couleur de la description du profil */
+}
+
 
 footer {
     background-color: #8b4513; /* Couleur de fond marron */
