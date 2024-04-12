@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="page-accueil.html">Accueil</a></li>
-                <li><a href="projetreact/components/mon_compte.js">Mon Compte</a></li>
+                <li><a href="MonCompte.html">Mon Compte</a></li>
                 <li><a href="projetreact/components/cours.js">Cours</a></li>
                 <li><a href="projetreact/components/exercices.js">Exercices</a></li>
                 <li><a href="projetreact/components/opportunities.js">Opportunités</a></li>
@@ -29,11 +29,20 @@
             <h2>Vidéos des utilisateurs</h2>
             <!-- Contenu des vidéos fictives -->
             <div class="video-thumbnail">
-                <video width="640" height="360" controls>
-                    <source src="Media/WhatsApp Video 2024-04-08 at 12.51.02_1799b7ff.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéo.
-                </video>
-                <h3>Performance of the ALU CHOIR for Kwibuka30</h3>
+                <div class="video">
+                    <div class="options-left">
+                        <i class="fas fa-thumbs-up"></i> <!-- Icône de like -->
+                        <i class="fas fa-comment"></i> <!-- Icône de commentaire -->
+                        <i class="fas fa-user-plus"></i> <!-- Icône d'abonnement -->
+                    </div>
+                    <div class="video-content-right">
+                        <!-- Contenu de la vidéo -->
+                        <video id="alu-choir" width="640" height="360" controls>
+                            <source src="Media/WhatsApp Video 2024-04-08 at 12.51.02_1799b7ff.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video><h3>Performance of the ALU CHOIR for Kwibuka30</h3>
+                    </div>
+                </div>
             </div>
 
             <div class="video-thumbnail">
@@ -45,7 +54,7 @@
             </div>
             <!-- Ajoutez plus de vidéos fictives si nécessaire -->
         </section>
-    
+        
         <!-- Section des publications -->
         <section id="publications">
             <h2>Publications des utilisateurs</h2>
@@ -54,28 +63,35 @@
             <div class="publication">
                 <h3>Titre de la publication</h3>
                 <img src="Media/download1.jpg" alt="Performance">
-
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <!-- Ajoutez des images fictives si nécessaire -->
             </div>
-
+            
             <div class="publication">
                 <h3>Titre de la publication</h3>
                 <img src="Media/OIP1.jpg" alt="Description">
-
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <!-- Ajoutez des images fictives si nécessaire -->
             </div>
-
-            <div class="publication">
+            
+            <div class="publication" id="pub3">
                 <h3>Titre de la publication</h3>
-                <img src="Media/download2.jpg" alt="Description">
+                <div class="video-options">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
+                <img src="Media/download2.jpg" alt="Description">
+                
                 <!-- Ajoutez des images fictives si nécessaire -->
             </div>
             <!-- Ajoutez plus de publications fictives si nécessaire -->
         </section>
-    
+        
+
         <!-- Section des profils à suivre -->
         <section id="profils">
             <h2>Profils à suivre</h2>
@@ -85,26 +101,27 @@
                 <h3>Nom d'utilisateur</h3>
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-
+    
             <div class="profil">
                 <img src="Media/OIP3.jpg" alt="Image de profil">
                 <h3>Nom d'utilisateur</h3>
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-
+    
             <div class="profil">
                 <img src="Media/download3.jpg" alt="Image de profil">
                 <h3>Nom d'utilisateur</h3>
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-
+    
             <div class="profil">
-                <img src="Media/OIP3.jpg" alt="Image de profil">
+                <img src="Media/OIP2.jpg" alt="Image de profil">
                 <h3>Nom d'utilisateur</h3>
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <!-- Ajoutez plus de profils fictifs si nécessaire -->
         </section>
+    
     </main>    
     
     <footer>
