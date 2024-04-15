@@ -23,19 +23,78 @@
     </header>
 
     <main>
+        <div class="search-bar fixed-nav">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">Rechercher</button>
+        </div>
+
+        <aside class="sidebar fixed-nav">
+            <nav>
+                <ul>
+                    <li><a href="#">Mes Cours terminés</a></li>
+                    <li><a href="#">Mes Cours Favoris</a></li>
+                    <li><a href="#">Mes Cours téléchargés</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <h1>Cours disponibles</h1>
+
         <section class="cours">
             <h2>Cours de Musique</h2>
-            <h3>THEORY 1. The stave</h3>
-            <!-- Intégration de la vidéo YouTube -->
-            <iframe width="560" height="315" src="https://youtu.be/j9F0tNq-OFE?si=0LKK_0eilfa5OlEg" frameborder="0" allowfullscreen></iframe>
-            <p>Definition and description of the musical stave with its 5 lines and 4 spaces numbered from bottom to top, and its ledger lines, greeding all the necessary signs for wrighting and reading music.
-                As we can see in the video, the range is a set of 5 parallel lines and 4 spacing on which the signs used to write the music will be placed. 
-                We usually number these lines and spaces from bottom to top. 
-                One can increase the range of the stave by adding Additional ledger lines above for the high instruments or below for the bass instruments. 
-                Sometimes, in order to avoid too many ledger lines, a sign of octave is used, represented by a small number 8 which is placed above or below the notes and that allows us to write sounds inside the stave and to make them sound an octave higher or lower. 
-                In order to be red, some instruments require several staves. This is the case for the harp or the piano that are written on two staves, or the organ that uses three staves.
-            </p>
+            <div class="videos">
+                <div class="video">
+                    <h3>1-C'est quoi la musique ?</h3>
+                    <!-- Intégration de la vidéo YouTube -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rxFA5mmbvP8?si=FXye6Fnuv1mRlYYf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Salut ! Voici le premier épisode de Musicam Scribere,<br>
+                        une chronique qui reprend à zéro les bases de la théorie musicale.<br>
+                        Dans cette vidéo, on va essayer de donner une définition de la musique.
+                    </p>
+                </div>
+                
+                <div class="video">
+                    <h3>2-Sur quoi on écrit les sons ?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/--F4MCU0kqs?si=bEXRkSQPD9wqB9Wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Dans ce deuxième épisode de Musicam Scribere,<br>
+                        on s'intéresse à la portée et aux différentes clé, deux éléments qui nous permettrons de placer les notes à l'écrit.
+                        Série à regarder dans l'ordre.
+                    </p>
+                </div>
+
+                <div class="video">
+                    <h3>3-Comment on écrit les notes ?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/igFQuMrBIwE?si=0ezmxxF1Br9fyt7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Dans ce troisième épisode de Musicam Scribere on apprend à placer les notes sur une portée selon leur hauteur, et écrire les différentes figures de notes qui correspondent aux différentes durées. 
+                        Série à regarder dans l'ordre.
+                    </p>
+                </div>
+                
+                <div class="video">
+                    <h3>4-C'est quoi les mesures ?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lYWT3ntyEqY?si=43kr7pjWkGC2Mdo9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>4ème épisode de Musicam Scribere. Aujourd'hui on va essayer de comprendre le chiffrage des mesures.
+                        Bon visionnage !
+                    </p>
+                </div>
+                
+                <div class="video">
+                    <h3>5-Les mesures ternaires</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5yhUiXJHOM8?si=1MAcTLGWFneqYYQh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>5ème épisode de Musicam Scribere. Aujourd'hui on va essayer de comprendre le fonctionnement des mesures ternaires.
+                        Bon visionnage !
+                    </p>
+                </div>
+                
+                <div class="video">
+                    <h3>6-C'est quoi le tempo?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ezzfEnRDAQ?si=nruVeNR8nVHpdGTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>6ème épisode de Musicam Scribere. Aujourd'hui on va essayer de comprendre le tempo.
+                        Bon visionnage !
+                    </p>
+                </div>
+            
+            </div>
         </section>
         
         <!-- Ajoutez plus de sections de cours au besoin -->

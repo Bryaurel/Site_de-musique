@@ -12,6 +12,10 @@ header {
     padding: 20px;
 }
 
+header h1 {
+    color: #ffffff;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -50,6 +54,84 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère autour des sections de cours */
 }
+
+.cours {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video {
+    width: calc(25% - 10px); /* 25% pour chaque colonne avec un espace de 10px entre les vidéos */
+    margin-bottom: 20px;
+}
+
+.video iframe {
+    width: 100%; /* Pour s'assurer que la vidéo occupe toute la largeur du conteneur */
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Pour s'assurer que les barres de navigation apparaissent au-dessus du contenu défilant */
+}
+
+/* Styles pour la barre de navigation sur le côté gauche */
+.sidebar.fixed-nav {
+    width: 200px; /* Largeur de la barre de navigation */
+    background-color: #f2f2f2;
+    padding: 20px;
+    float: left;
+}
+
+.sidebar.fixed-nav nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar.fixed-nav nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar.fixed-nav nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Styles pour la barre de recherche en bas de "Cours de Musique" */
+.search-bar.fixed-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar.fixed-nav input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar.fixed-nav button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar.fixed-nav button:hover {
+    background-color: #0056b3;
+}
+
 
 footer {
     background-color: #8b4513;

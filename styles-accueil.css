@@ -3,14 +3,84 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5; /* Couleur de fond générale */
     color: #333; /* Couleur du texte */
-    padding: 20px;
+    margin: 0px;
 }
 
-header {
-    background-color: #8b4513; /* Couleur de fond marron */
+.main-nav.fixed-nav {
     color: white;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8b4513; /* Couleur de fond de la barre de navigation */
+    z-index: 1000; /* Pour s'assurer que la barre de navigation apparaît au-dessus du contenu défilant */
 }
+
+.main-nav nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav nav ul li a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    color:#a55318;
+}
+
+.sidebar {
+    margin-top: 138px;
+    position: fixed;
+    top: 70px; /* Ajustez cette valeur pour aligner la barre de navigation avec la barre de navigation principale */
+    bottom: 0;
+    width: 200px; /* Largeur de la barre de navigation latérale */
+    background-color: #a55318;
+     /* Pour s'assurer que la barre de navigation est au-dessus du contenu */
+    
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    color:#a55318;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 20%;
+    z-index: 1000;
+}
+
 
 nav ul {
     list-style-type: none;
@@ -33,6 +103,10 @@ main {
     margin: 0 auto;
 }
 
+main {
+    margin-left: 300px;
+}
+
 h2 {
     font-size: 24px;
     color: #555; /* Couleur des titres de section */
@@ -41,28 +115,12 @@ h2 {
 /* Style des sections de la page d'accueil */
 section {
     margin-bottom: 40px;
+    margin-top: 150px;
 }
 
 
 /* Centrer les vidéos et publications */
-video {
-    margin-left: 25%;
-}
 
-#pub3 {
-    display: flex;
-    flex-direction: row; /* Direction de ligne inversée pour placer l'image à droite */
-    align-items: center; /* Centrage vertical */
-    background-color: #f5f5f5;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-#pub3 .video-options {
-    margin-right: 10px; /* Espacement entre les boutons et l'image */
-}
 
 img {
     width: 50%;
@@ -110,6 +168,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-left: 260px;
 }
 
 /* For screens smaller than 600px (mobile) */
