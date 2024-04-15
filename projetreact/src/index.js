@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom';
+import MonCompte from './components/MonCompte'; // Assurez-vous que le chemin d'importation est correct
+import './index.css'; // Si vous avez des styles globaux à appliquer
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <MonCompte />
+  </React.StrictMode>,
+  document.getElementById('root') // Assurez-vous que votre index.html a une balise <div id="root"></div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

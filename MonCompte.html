@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles-moncompte.css">
 </head>
 <body>
-    <header>
+    <header class="main-nav fixed-nav">
         <h1>ZikNet</h1>
         <nav>
             <ul>
                 <li><a href="page-accueil.html">Accueil</a></li>
                 <li><a href="MonCompte.html">Mon Compte</a></li>
-                <li><a href="projetreact/components/cours.js">Cours</a></li>
+                <li><a href="cours.html">Cours</a></li>
                 <li><a href="projetreact/components/exercices.js">Exercices</a></li>
                 <li><a href="projetreact/components/opportunities.js">Opportunités</a></li>
                 <li><a href="projetreact/components/messages.js">Messages</a></li>
@@ -21,36 +21,62 @@
         </nav>
     </header>
 
-    <main>
-        <section id="profile">
-            <h2>Profil Utilisateur</h2>
-            <!-- Formulaire pour mettre à jour le profil -->
-            <form id="profile-form">
+    <nav class="sidebar">
+        <h2>Paramètres</h2>
+        <ul>
+            <li><a href="MonCompte.html" class="active">Modifier le profil</a></li>
+            <li><a href="#">Changer de mot de passe</a></li>
+            <li><a href="#">Changer de langue</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>Modifier le profil</h1>
+        <form id="profileForm">
+            <div class="champ">
+                <label for="firstName">Prénom:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="champ">
+                <label for="lastName">Nom:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="champ">
                 <label for="username">Nom d'utilisateur:</label>
                 <input type="text" id="username" name="username" required>
-                <label for="email">Adresse e-mail:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Mettre à jour le profil</button>
-            </form>
-        </section>
-
-        <section id="add-video">
-            <h2>Ajouter une nouvelle vidéo</h2>
-            <!-- Formulaire pour ajouter une nouvelle vidéo -->
-            <form id="video-form">
-                <label for="video-title">Titre de la vidéo:</label>
-                <input type="text" id="video-title" name="video-title" required>
-                <label for="video-url">URL de la vidéo:</label>
-                <input type="url" id="video-url" name="video-url" required>
-                <button type="submit">Ajouter la vidéo</button>
-            </form>
-        </section>
+            </div>
+            <div class="champ">
+                <label for="birthdate">Date de naissance:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="champ">
+                <label for="birthplace">Lieu de naissance:</label>
+                <input type="text" id="birthplace" name="birthplace" required>
+            </div>
+            <div class="champ">
+                <label for="nationality">Nationalité:</label>
+                <select id="nationality" name="nationality" required>
+                    <option value="" disabled selected>Sélectionner une nationalité</option>
+                    <!-- Ajoutez les options pour les pays -->
+                </select>
+            </div>
+            <div class="champ">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio"></textarea>
+            </div>
+            <div class="champ">
+                <label for="musicGenres">Genres musicaux:</label>
+                <select id="musicGenres" name="musicGenres" multiple required>
+                    <!-- Ajoutez les options pour les genres musicaux -->
+                </select>
+            </div>
+            
+            <button type="submit">Enregistrer</button>
+        </form>
     </main>
 
     <footer>
         <p>&copy; 2024 ZikNet. Tous droits réservés.</p>
     </footer>
 
-    <script src="script-moncompte.js" defer></script>
 </body>
 </html>

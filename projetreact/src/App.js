@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import ProfileForm from './components/ProfileForm';
+import BioSection from './components/BioSection';
+import ProfilePhoto from './components/ProfilePhoto';
+import MusicGenres from './components/MusicGenres';
+import Publications from './components/Publications';
+import ContentForm from './components/ContentForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Mon Compte</h1>
+      <ProfileForm />
+      <BioSection />
+      <ProfilePhoto />
+      <MusicGenres />
+      <Publications />
+      <ContentForm />
     </div>
   );
-}
+};
 
 export default App;
