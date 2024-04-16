@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e2dbdb;
 }
 
 .main-nav.fixed-nav {
@@ -160,3 +161,20 @@ button {
 button:hover {
     background-color: #555;
 }
+
+/* For screens smaller than 600px (mobile) */
+@media (max-width: 600px) {
+    /* CSS rules for mobile layout */
+}
+
+/* For screens between 600px and 1024px (tablet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* CSS rules for tablet layout */
+}
+
+/* For screens larger than 1024px (desktop) */
+@media (min-width: 1025px) {
+    /* CSS rules for desktop layout */
+}
+
+

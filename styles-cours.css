@@ -6,10 +6,37 @@ body {
     padding: 20px;
 }
 
-header {
-    background-color: #8b4513; /* Couleur de fond marron */
+.main-nav.fixed-nav {
     color: white;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8b4513; /* Couleur de fond de la barre de navigation */
+    z-index: 1000; /* Pour s'assurer que la barre de navigation apparaît au-dessus du contenu défilant */
+}
+
+.main-nav nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav nav ul li a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    color:#a55318;
 }
 
 header h1 {
@@ -35,6 +62,10 @@ nav ul li a {
 main {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+main {
+    margin-top: 150px;
 }
 
 h1 {
@@ -75,51 +106,58 @@ h2 {
     width: 100%; /* Pour s'assurer que la vidéo occupe toute la largeur du conteneur */
 }
 
-.fixed-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Pour s'assurer que les barres de navigation apparaissent au-dessus du contenu défilant */
-}
 
 /* Styles pour la barre de navigation sur le côté gauche */
-.sidebar.fixed-nav {
-    width: 200px; /* Largeur de la barre de navigation */
-    background-color: #f2f2f2;
+.sidebar {
+    margin-top: 172px;
+    width: 220px;
+    background-color: #a55318;
+    color: #fff;
     padding: 20px;
-    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
 }
 
-.sidebar.fixed-nav nav ul {
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-.sidebar.fixed-nav nav ul li {
+.sidebar ul li {
     margin-bottom: 10px;
 }
 
-.sidebar.fixed-nav nav ul li a {
+.sidebar ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
     display: block;
 }
 
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Styles pour la barre de recherche en bas de "Cours de Musique" */
-.search-bar.fixed-nav {
+.search-bar {
     margin-top: 20px;
     text-align: center;
 }
 
-.search-bar.fixed-nav input[type="text"] {
+.search-bar input[type="text"] {
     padding: 10px;
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.search-bar.fixed-nav button {
+.search-bar button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -128,17 +166,36 @@ h2 {
     cursor: pointer;
 }
 
-.search-bar.fixed-nav button:hover {
+.search-bar button:hover {
     background-color: #0056b3;
 }
 
 
 footer {
-    background-color: #8b4513;
+    background-color: #8b4513; /* Couleur de fond marron */
     color: white;
-    padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    margin-left: 260px;
 }
+
+main {
+    margin-left: 300px;
+}
+
+/* For screens smaller than 600px (mobile) */
+@media (max-width: 600px) {
+    /* CSS rules for mobile layout */
+}
+
+/* For screens between 600px and 1024px (tablet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* CSS rules for tablet layout */
+}
+
+/* For screens larger than 1024px (desktop) */
+@media (min-width: 1025px) {
+    /* CSS rules for desktop layout */
+}
+
+

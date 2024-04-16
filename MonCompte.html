@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Compte</title>
     <link rel="stylesheet" href="styles-moncompte.css">
+    <script src="script-moncompte.js" defer></script>
 </head>
 <body>
     <header class="main-nav fixed-nav">
@@ -54,22 +55,32 @@
             </div>
             <div class="champ">
                 <label for="nationality">Nationalité:</label>
-                <select id="nationality" name="nationality" required>
+                <select id="nationalite" name="nationality" required>
                     <option value="" disabled selected>Sélectionner une nationalité</option>
                     <!-- Ajoutez les options pour les pays -->
                 </select>
             </div>
             <div class="champ">
-                <label for="bio">Bio:</label>
-                <textarea id="bio" name="bio"></textarea>
+                <label for="city">Ville de Résidence:</label>
+                <input type="text" id="city" name="city">
             </div>
             <div class="champ">
-                <label for="musicGenres">Genres musicaux:</label>
-                <select id="musicGenres" name="musicGenres" multiple required>
+                <label for="country">Pays de Résidence:</label>
+                <input type="text" id="country" name="country">
+            </div>
+            <div class="champ">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="8"></textarea>
+            </div>
+            <div class="champ">
+                <label for="musicGenres">Genre musical favori:</label>
+                <select id="genres" name="musicGenres" multiple required>
                     <!-- Ajoutez les options pour les genres musicaux -->
                 </select>
             </div>
-            
+            <label for="photo">Photo de profil :</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
             <button type="submit">Enregistrer</button>
         </form>
     </main>
