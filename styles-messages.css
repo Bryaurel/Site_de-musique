@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2dbdb /* Couleur de fond générale */
+    color: #333; /* Couleur du texte */
+    margin: 0px;
+}
+
+.main-nav.fixed-nav {
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8b4513; /* Couleur de fond de la barre de navigation */
+    z-index: 1000; /* Pour s'assurer que la barre de navigation apparaît au-dessus du contenu défilant */
+}
+
+.main-nav nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav nav ul li a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    color:#a55318;
+}
+
+footer {
+    background-color: #8b4513; /* Couleur de fond marron */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-left: 260px;
+}
